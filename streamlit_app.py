@@ -100,7 +100,7 @@ Your purpose is to be a supportive and non-judgmental listener.
 
 # --- App UI and Logic ---
 # Header section with avatar and title
-st.markdown('<div style="text-align: center;"><h1>Pandora - Your Mental Health Assistant 💬</h1></div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: center;"><h1>Kura - Your Mental Health Assistant 💬</h1></div>', unsafe_allow_html=True)
 
 st.warning("**Disclaimer:** I am an AI assistant and not a substitute for a professional therapist or medical advice. If you are in a crisis, please contact a local emergency service immediately.")
 st.markdown("---")
@@ -119,7 +119,7 @@ try:
     def show_chat_history():
         for message in st.session_state.chat.history:
             is_user = message.role == "user"
-            with st.chat_message(name="You" if is_user else "Pandora"):
+            with st.chat_message(name="You" if is_user else "Kura"):
                 if not is_user:
                     # Display Pandora's avatar
                     st.markdown('<div class="avatar-bot">P</div>', unsafe_allow_html=True)
@@ -135,14 +135,14 @@ try:
         suicide_keywords = ["kill myself", "want to die", "commit suicide", "end my life", "suicidal"]
         if any(keyword in user_prompt.lower() for keyword in suicide_keywords):
             safety_response = "I'm very sorry to hear you're feeling this way... Please seek help immediately by contacting this helpline: 9152987821."
-            with st.chat_message("Pandora"):
+            with st.chat_message("Kura"):
                 st.markdown('<div class="avatar-bot">P</div>', unsafe_allow_html=True)
                 st.markdown(safety_response)
             st.session_state.chat.history.append({'role': 'user', 'parts': [{'text': user_prompt}]})
             st.session_state.chat.history.append({'role': 'model', 'parts': [{'text': safety_response}]})
         else:
             response = st.session_state.chat.send_message(user_prompt)
-            with st.chat_message("Pandora"):
+            with st.chat_message("Kura"):
                 st.markdown('<div class="avatar-bot">P</div>', unsafe_allow_html=True)
                 st.markdown(response.text)
 
