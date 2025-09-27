@@ -41,7 +41,7 @@ st.markdown("---")
 # Initialize the Gemini model with the corrected, stable model name
 try:
     model = genai.GenerativeModel(
-        model_name="gemini-1.0-pro",  # <-- THIS IS THE ONLY LINE THAT CHANGED
+        model_name="gemini-pro",  # <-- THIS IS THE ONLY LINE THAT CHANGED
         system_instruction=SYSTEM_PROMPT
     )
 
