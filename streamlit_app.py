@@ -4,12 +4,12 @@ import google.generativeai as genai
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Kura AI", page_icon="🧠", layout="centered")
 
-# --- CUSTOM CSS FOR STYLING ---
+# --- CUSTOM CSS FOR A BOLD, PROFESSIONAL MARKETING LOOK ---
 st.markdown("""
 <style>
-    /* Main app background with a soft, peaceful gradient */
+    /* Main app background with a dark, professional gradient */
     [data-testid="stAppViewContainer"] {
-        background-image: linear-gradient(135deg, #e0f2f1 0%, #e6f7ff 100%); /* Light Teal to Sky Blue */
+        background-image: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); /* Dark Slate to Dark Blue */
     }
 
     /* General chat bubble styling */
@@ -17,23 +17,23 @@ st.markdown("""
         border-radius: 20px;
         padding: 1rem 1.5rem;
         margin-bottom: 1rem;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-        border: 1px solid rgba(0,0,0,0.04);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Stronger shadow for dark background */
+        border: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* User message styling remains clean and white */
+    /* User message styling: clean white on dark background */
     [data-testid="stChatMessageContent"] {
         background-color: #ffffff;
-        color: #1f2937; /* Dark gray text for readability */
+        color: #1f2937; /* Dark gray text for high contrast */
     }
 
-    /* Bot message styling with a calming mint green */
+    /* Bot message styling with a strong, confident blue */
     [data-testid="stChatMessageContent"]:has(.avatar-bot) {
-        background-color: #d1fae5; /* Soft Mint Green */
-        color: #065f46; /* Dark Green text for high contrast */
+        background-color: #2563eb; /* Strong Blue */
+        color: #ffffff; /* White text for high contrast */
     }
 
-    /* Bot avatar styling with a friendly teal */
+    /* Bot avatar styling with a bold dark red */
     .stChatMessage > div:first-child {
       display: flex;
       flex-direction: column;
@@ -44,7 +44,7 @@ st.markdown("""
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #14b8a6; /* Friendly Teal */
+        background-color: #991b1b; /* Dark Red */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,18 +54,18 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 
-    /* Title styling with a professional dark gray */
+    /* Title styling: white to stand out on the dark background */
     h1 {
-        color: #1f2937;
+        color: #ffffff;
         text-align: center;
     }
     
-    /* Disclaimer/Warning styling with a soft yellow */
+    /* Disclaimer/Warning styling: muted for a professional look */
     [data-testid="stWarning"] {
-        background-color: #fef3c7; /* Soft yellow */
+        background-color: #1e293b; /* Dark Slate */
         border-radius: 15px;
-        border-color: #fcd34d; /* Amber border */
-        color: #92400e; /* Darker text for readability */
+        border-color: #3b82f6; /* Blue border */
+        color: #e2e8f0; /* Light text for readability */
     }
 
 </style>
