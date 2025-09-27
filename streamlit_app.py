@@ -7,32 +7,33 @@ st.set_page_config(page_title="Kura AI", page_icon="🧠", layout="centered")
 # --- CUSTOM CSS FOR STYLING ---
 st.markdown("""
 <style>
-    /* Main app background */
+    /* Main app background with a soft, peaceful gradient */
     [data-testid="stAppViewContainer"] {
-        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background-image: linear-gradient(135deg, #e0f2f1 0%, #e6f7ff 100%); /* Light Teal to Sky Blue */
     }
 
-    /* Chat bubble styling */
+    /* General chat bubble styling */
     .stChatMessage {
         border-radius: 20px;
         padding: 1rem 1.5rem;
         margin-bottom: 1rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+        border: 1px solid rgba(0,0,0,0.04);
     }
 
-    /* User message styling */
+    /* User message styling remains clean and white */
     [data-testid="stChatMessageContent"] {
-        background-color: #ffffff; /* White background for user */
+        background-color: #ffffff;
+        color: #1f2937; /* Dark gray text for readability */
     }
 
-    /* Bot message styling */
+    /* Bot message styling with a calming mint green */
     [data-testid="stChatMessageContent"]:has(.avatar-bot) {
-        background-color: #e0e7ff; /* Soft lavender for bot */
-        color: #374151;
+        background-color: #d1fae5; /* Soft Mint Green */
+        color: #065f46; /* Dark Green text for high contrast */
     }
 
-    /* Avatar styling */
+    /* Bot avatar styling with a friendly teal */
     .stChatMessage > div:first-child {
       display: flex;
       flex-direction: column;
@@ -43,7 +44,7 @@ st.markdown("""
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #4f46e5;
+        background-color: #14b8a6; /* Friendly Teal */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,16 +54,18 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 
-    /* Title styling */
+    /* Title styling with a professional dark gray */
     h1 {
-        color: #374151;
+        color: #1f2937;
         text-align: center;
     }
     
-    /* Disclaimer/Warning styling */
+    /* Disclaimer/Warning styling with a soft yellow */
     [data-testid="stWarning"] {
+        background-color: #fef3c7; /* Soft yellow */
         border-radius: 15px;
-        border-color: #fbbf24;
+        border-color: #fcd34d; /* Amber border */
+        color: #92400e; /* Darker text for readability */
     }
 
 </style>
