@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativai as genai
+import google.generativeai as genai
 
 # --- IMPORTANT: PASTE YOUR GEMINI API KEY HERE ---
 # It's recommended to use Streamlit Secrets for this in a real app for security.
