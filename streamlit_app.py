@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # --- IMPORTANT: PASTE YOUR GEMINI API KEY HERE ---
 # It's recommended to use Streamlit Secrets for this in a real app for security.
-API_KEY = "AIzaSyC8pGjFPePv2dtfxCOtoRKBfOV3Uy3gTk4v"
+API_KEY = "AIzaSyAs-vkAA9MB405bzY3lSsMJtb0VsxScbSc"
 
 # --- API Configuration and Error Handling ---
 try:
