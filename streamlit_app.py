@@ -44,7 +44,7 @@ st.markdown("""
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #991b1b; /* Dark Red */
+        background-color: #991b1b; /* Blue */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -136,14 +136,14 @@ try:
         if any(keyword in user_prompt.lower() for keyword in suicide_keywords):
             safety_response = "I'm very sorry to hear you're feeling this way... Please seek help immediately by contacting this helpline: 9152987821."
             with st.chat_message("Kura"):
-                st.markdown('<div class="avatar-bot">P</div>', unsafe_allow_html=True)
+                st.markdown('<div class="avatar-bot">K</div>', unsafe_allow_html=True)
                 st.markdown(safety_response)
             st.session_state.chat.history.append({'role': 'user', 'parts': [{'text': user_prompt}]})
             st.session_state.chat.history.append({'role': 'model', 'parts': [{'text': safety_response}]})
         else:
             response = st.session_state.chat.send_message(user_prompt)
             with st.chat_message("Kura"):
-                st.markdown('<div class="avatar-bot">P</div>', unsafe_allow_html=True)
+                st.markdown('<div class="avatar-bot">K</div>', unsafe_allow_html=True)
                 st.markdown(response.text)
 
 except Exception as e:
