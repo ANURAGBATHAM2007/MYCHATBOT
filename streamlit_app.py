@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # --- IMPORTANT: PASTE YOUR GEMINI API KEY HERE ---
 # It's recommended to use Streamlit Secrets for this in a real app for security.
-API_KEY = "AIzaSyC8pGjFPePv2dtfxCOtoRKBfOV3Uy3gTk4"
+API_KEY = "AIzaSyC8pGjFPePv2dtfxCOtoRKBfOV3Uy3gTk4v"
 
 # --- API Configuration and Error Handling ---
 try:
@@ -41,7 +41,7 @@ st.markdown("---")
 # Initialize the Gemini model with the corrected, stable model name
 try:
     model = genai.GenerativeModel(
-        model_name="gemini-pro",  # <-- THIS IS THE ONLY LINE THAT CHANGED
+        model_name="gemini-1.0-pro",  # <-- THIS IS THE ONLY LINE THAT CHANGED
         system_instruction=SYSTEM_PROMPT
     )
 
